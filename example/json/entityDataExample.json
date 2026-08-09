@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "id": "john",
   "nametag": "John",
   "baseEntity": "minecraft:villager",
@@ -19,5 +19,10 @@
   },
   "equipment": {
     "mainHand": "weapon:basic_sword"
+  },
+  "entityStatistics": {
+    "stats": {
+      "DAMAGE": 2.0
+    }
   }
 }
