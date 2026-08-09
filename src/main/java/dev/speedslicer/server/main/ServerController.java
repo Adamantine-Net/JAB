@@ -60,6 +60,7 @@ public class ServerController {
         itemDataLoader = new ItemDataLoader();
         entityDataLoader = new EntityDataLoader();
         entityAIDataLoader = new EntityAIDataLoader();
+        dungeonDataLoader = new DungeonDataLoader();
 
         playerDataManager = new PlayerDataManager();
 
@@ -68,6 +69,8 @@ public class ServerController {
         itemDataLoader.bootstrapLoad(this);
         entityDataLoader.bootstrapLoad(this);
         entityAIDataLoader.bootstrapLoad(this);
+        dungeonDataLoader.bootstrapLoad(this);
+
         MinecraftServer minecraftServer = MinecraftServer.init();
         minecraftServer.start("0.0.0.0", 25565);
         lobbyInstanceManager = new LobbyInstanceManager(this);

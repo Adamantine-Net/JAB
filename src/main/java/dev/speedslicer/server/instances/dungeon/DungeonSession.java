@@ -66,7 +66,7 @@ public class DungeonSession {
         dungeonInstance.eventNode().addListener(RoomClearEvent.class, event -> {
             final RoomData currentRoom = event.getRoom();
             final RoomData nextRoom = event.getNextRoom();
-            if (!currentRoom.completionLootTable().isEmpty()) {
+            if (!(currentRoom.completionLootTable() == null)) {
                 currentRoom.completionLootTable()
                         .forEach(t ->
                                 players.forEach(p -> LootTableDataHandler

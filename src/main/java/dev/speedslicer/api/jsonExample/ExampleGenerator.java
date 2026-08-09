@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
+import dev.speedslicer.api.APIVersion;
 import dev.speedslicer.api.dungeon.DungeonData;
 import dev.speedslicer.api.dungeon.RoomData;
 import dev.speedslicer.api.entity.EntityData;
@@ -131,9 +132,10 @@ public class ExampleGenerator {
                 mobs,
                 new Pos(0,10,0),
                 new Pos(10,0,10),
-                List.of(lootTableDataExample, lootTableDataExample)
+                List.of(lootTableDataExample)
         ));
         dungeonExampleDataExample = new DungeonData(
+                APIVersion.dungeonDataVersion,
                 "overworld",
                 "Overworld",
                 "minecraft:grass_block",

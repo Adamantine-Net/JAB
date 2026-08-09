@@ -40,7 +40,7 @@ public final class DungeonDataLoader {
         Path dungeonsData = Path.of("data", "dungeons");
 
             Files.createDirectories(dungeonsData);
-            try (Stream<Path> paths = Files.walk(dungeonsData)) {
+            try (Stream<Path> paths = Files.walk(dungeonsData, 2)) {
                 paths.filter(Files::isRegularFile)
                         .filter(FileUtil::isJsonFile)
                         .forEach(path -> loadDungeon(path, serverController));
